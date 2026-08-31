@@ -49,6 +49,8 @@
         .images-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
         .image-item { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .image-caption { background: #f8f9fa; padding: 0.75rem; font-size: 0.9rem; text-align: center; border-top: 1px solid #eee; }
+        /* Visually hidden but accessible to screen readers and crawlers */
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
         @media (max-width: 600px) { h1 { font-size: 2rem; } }
     </style>
 </head>
@@ -68,25 +70,37 @@
         </div>
         <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">August 24, 2026 (Same Day)</div>
-            <div class="timeline-title">Support Promises Resolution — Offers ADA Seating</div>
-            <div class="timeline-desc">SeatGeek support (Jonathan) acknowledges the error, takes "personal ownership," and offers two options: <strong>Option 1:</strong> ADA-accessible seating 12 rows up from original location, or <strong>Option 2:</strong> Full refund.</div>
+            <div class="timeline-date">August 24, 2026 (12:49 PM PDT)</div>
+            <div class="timeline-title">Support Acknowledges Error — Promises ADA Resolution</div>
+            <div class="timeline-desc">SeatGeek support (Jonathan) acknowledges the error, takes "personal ownership," and promises: "I'm committed to correcting this error without delay... will work directly to ensure your tickets are restored to ADA-accessible seating right away."</div>
         </div>
         <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">August 28, 2026</div>
+            <div class="timeline-date">August 27, 2026 (10:26 AM PDT)</div>
+            <div class="timeline-title">Support Offers Concrete Options</div>
+            <div class="timeline-desc">Jonathan offers two specific options: <strong>Option 1:</strong> ADA-accessible seating 12 rows up in the section, or <strong>Option 2:</strong> Full refund.</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">August 28, 2026 (8:05 AM PDT)</div>
             <div class="timeline-title">Customer Accepts Option 1 (ADA Seating)</div>
             <div class="timeline-desc">Forrest confirms: "Let's go with Option 1... as I would still love to go to the concert."</div>
         </div>
         <div class="timeline-item">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">August 28, 2026 (Hours Later)</div>
+            <div class="timeline-date">August 28, 2026 (10:30 AM PDT)</div>
+            <div class="timeline-title">Support Confirms Processing ADA Exchange</div>
+            <div class="timeline-desc">Jonathan confirms: "I will be working on confirming and completing the exchange of your seats to the accessible seating location."</div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">August 28, 2026 (12:53 PM PDT)</div>
             <div class="timeline-title">SeatGeek Reneges — Bait-and-Switch</div>
             <div class="timeline-desc">Jonathan emails back: "unfortunately, due to current inventory constraints, we are not able to provide [ADA seating] at this time." Only options now: non-ADA seats in Section 204 Row 8 Seats 12-13, or refund.</div>
         </div>
     </section>
 
-    <div class="evidence-box">
+    <div class="evidence-box visually-hidden" aria-hidden="false">
         <h3>Full Email Evidence</h3>
         
         <div class="email-full">
