@@ -44,7 +44,7 @@ h1 {
 }
 
 h1 img.logo-title {
-    max-height: 60px;
+    max-height: 120px;
     width: auto;
 }
 
@@ -447,7 +447,7 @@ footer {
     }
     
     h1 img.logo-title {
-        max-height: 40px;
+        max-height: 80px;
     }
     
     .more-stories {
@@ -523,7 +523,7 @@ footer {
     }
     
     h1 img.logo-title {
-        max-height: 30px;
+        max-height: 60px;
     }
     
     .more-stories {
