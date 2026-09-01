@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var captionTexts = [
         "Email 1: Initial complaint and promise to fix ADA seating",
         "Email 2: Options presented - ADA seating or refund",
-        "Email 3: Confirmation of ADA seat exchange processing",
-        "Email 4: SeatGeek reneges, cites inventory constraints",
-        "Email 5: Forrest's draft response expressing disappointment"
+        "Email 3: Customer confirms ADA seating selection",
+        "Email 4: Support confirms processing ADA seat exchange",
+        "Email 5: SeatGeek reneges, cites inventory constraints (The Bait-and-Switch)",
+        "Email 6: Customer follows up, rejects both options",
+        "Email 7: Final response - no ADA seats available, offers only refund"
     ];
 
     // Loop through thumbnails and set up click event
