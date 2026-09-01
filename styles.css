@@ -342,6 +342,25 @@ footer {
     margin-top: 4rem;
 }
 
+/* More Stories Section */
+.more-stories {
+    text-align: center;
+    padding: 3rem;
+    margin-top: 3rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.more-stories p {
+    font-size: 1.2rem;
+    color: var(--seatgeek-orange);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 /* Modal Styles */
 .modal {
     display: none;
@@ -431,6 +450,14 @@ footer {
         max-height: 40px;
     }
     
+    .more-stories {
+        padding: 2rem 1rem;
+    }
+    
+    .more-stories p {
+        font-size: 1rem;
+    }
+    
     .modal-content {
         width: 90%;
     }
@@ -499,6 +526,14 @@ footer {
         max-height: 30px;
     }
     
+    .more-stories {
+        padding: 1.5rem 1rem;
+    }
+    
+    .more-stories p {
+        font-size: 0.9rem;
+    }
+    
     .modal-content {
         width: 95%;
     }
@@ -554,7 +589,7 @@ footer {
         box-shadow: none;
     }
     
-    .evidence-item, .full-story, .cta, .sidebar {
+    .evidence-item, .full-story, .cta, .sidebar, .more-stories {
         background: white;
         box-shadow: none;
         border-color: #ddd;
