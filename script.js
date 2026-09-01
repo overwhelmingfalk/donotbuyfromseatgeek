@@ -2,49 +2,54 @@
 // Interactive elements and enhancements
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Evidence button click handlers
-    const evidenceButtons = document.querySelectorAll('.evidence-btn');
-    
-    evidenceButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // In a full implementation, this would open a modal or load the full email
-            // For now, we'll show an alert with the concept
-            alert('Full email view would be implemented here.\nIn production, this would load the complete email content or show a modal with the full email text.');
-        });
-    });
-    
-    // Add hover effect for evidence cards (enhancing the CSS effect)
-    const evidenceItems = document.querySelectorAll('.evidence-item');
-    
-    evidenceItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-4px)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-    
-    // Smooth scrolling for anchor links (if any are added later)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-    
-    // Console log for debugging (remove in production)
-    console.log('Do Not Buy From SeatGeek site loaded successfully');
-});
+    // Get the modal
+    var modal = document.getElementById("emailModal");
 
-// Optional: Add a simple animation for the hero overlay
-window.addEventListener('load', function() {
-    const heroOverlay = document.querySelector('.hero-overlay');
-    if (heroOverlay) {
-        heroOverlay.style.opacity = '0.15';
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var modalImg = document.getElementById("modal-img");
+    var captionText = document.getElementById("caption");
+
+    // Get all thumbnail images
+    var thumbnails = document.getElementsByClassName("email-thumbnail");
+    var captionTexts = [
+        "Email 1: Initial complaint and promise to fix ADA seating",
+        "Email 2: Options presented - ADA seating or refund",
+        "Email 3: Confirmation of ADA seat exchange processing",
+        "Email 4: SeatGeek reneges, cites inventory constraints",
+        "Email 5: Forrest's draft response expressing disappointment"
+    ];
+
+    // Loop through thumbnails and set up click event
+    for (var i = 0; i < thumbnails.length; i++) {
+        var thumb = thumbnails[i];
+
+        thumb.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            // Use the alt text as caption, or fallback to index-based caption
+            captionText.innerHTML = this.alt || captionTexts[i] || "Email screenshot";
+        }
     }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close-btn")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Optional: Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            modal.style.display = "none";
+        }
+    });
 });
