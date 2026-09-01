@@ -131,6 +131,7 @@ p {
     font-weight: 600;
     font-size: 1.2rem;
     border: 2px solid var(--seatgeek-orange);
+    margin-bottom: -1.5rem; /* Tighten spacing under the key stat */
 }
 
 /* Sidebar Styles */
@@ -461,6 +462,10 @@ footer {
     .modal-content {
         width: 90%;
     }
+    
+    .key-stat {
+        margin-bottom: -1rem; /* Less negative on tablet */
+    }
 }
 
 @media (max-width: 768px) {
@@ -484,6 +489,7 @@ footer {
     .key-stat {
         padding: 0.5rem 1rem;
         font-size: 1rem;
+        margin-bottom: -0.75rem; /* Even less negative on mobile */
     }
     
     h2 {
